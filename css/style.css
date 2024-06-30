@@ -1,0 +1,591 @@
+/* resetting and add custom fonts*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Roboto-Black";
+    src: url("/fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-light";
+    src: url("/fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-thin";
+    src: url("/fonts/Roboto-Thin.ttf");
+}
+
+/* CSS for Index Page */
+.main-page {
+    min-height: 100vh;
+    background-image: url("../Images/hero-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 10%;
+    background-color: rgba(12,12,12,255);
+    font-family: Roboto,sans-serif;
+}
+
+
+.logo {
+    font-size: 2rem;
+    float: left;
+    display: inline-block;
+    color: white;
+    margin-left: 3%;
+    padding-top: 1%;
+}
+
+
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(12,12,12,255);
+    padding: 1%;
+    z-index: 999;
+}
+
+nav ul{
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+nav li{
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px 40px 10px 40px;
+    display: inline-block;
+    border: 1px solid gray;
+    background-color: rgba(49,44,36,255);
+}
+
+nav a{
+    text-decoration: none;
+    color: rgba(220,219,218,255);
+    font-size: 1.2rem;
+}
+
+nav a:hover,a:focus{
+    color: orange;
+    text-decoration: underline;
+}
+
+
+.content-one{
+    max-width: 35%;
+    font-family: Roboto-light,sans-serif;
+    position: absolute;
+    top: 33%;
+    left: 3%;
+    padding: 5%;
+}
+
+.work-with-me-button{
+    margin-bottom: 5vh;
+}
+
+.work-with-me-button button {
+    padding: 1.6vh 4.2vw;
+    background-color: white;
+    font-family: Roboto-Black,sans-serif;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.purpose p{
+    color: white;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    margin-top: 5%;
+}
+
+.main-content h1{
+    display: inline;
+    font-size: 3.5rem;
+    color: white;
+}
+
+.purpose span{
+    display: inline-block;
+    margin-top: 1.25rem;
+    text-indent: 1rem;
+}
+
+.side-menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    background-color: rgba(49,44,36,255);
+    display: none;
+    flex-direction: column;
+    margin-right: 1%;
+    width: 200px;
+}
+
+.side-menu .items{
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    padding: 5%;
+}
+
+.side-menu .items a{
+    display: inline-block;
+    width: 100%;
+    padding-left: 30%;
+}
+
+.menu-close {
+    border: none;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    padding-bottom: 40px;
+}
+
+.drop-down{
+    display: none;
+}
+
+@media(max-width:1100px){
+    .hideOnMobile{
+        display: none;
+    }
+    .drop-down{
+        display: block;
+        margin-right: 10%;
+        padding: 0 30px;
+    }
+
+    .content-one {
+
+        max-width: 50%;
+        font-size: 0.9rem;
+        margin-left: 20vw;
+        padding-right: 0;
+    }
+
+    .content-one button{
+        width: 90%;
+    }
+}
+
+/* CSS for portfolio page */
+.body-portfolio{
+    min-height: 100vh;
+    background-color: rgba(12,12,12,255);
+    font-family: Roboto,sans-serif;
+}
+
+.pf-container{
+    position: relative;
+    height: 60%;
+    width: 60%;
+    top: 20vh;
+    left: 20%;
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    gap: 2rem;
+    justify-content: center;
+    padding-bottom: 4vh;
+}
+
+.image-frame{
+    border: none;
+    height: 300px;
+    width: 300px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#img-design{
+    position: absolute;
+    height: 130%;
+    width: 170%;
+    left: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+#img-laptop{
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    left: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+#img-tablet{
+    position: absolute;
+    height: 110%;
+    width: 120%;
+    right: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+#img-scribble{
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 115%;
+    right: 0;
+    bottom: 0;
+}
+
+#img-design-table{
+    position: absolute;
+    object-fit: cover;
+    height: 123%;
+    width: 115%;
+    left: 0;
+    top: 0;
+}
+
+.pf-container img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.pf-container img:hover {
+    opacity: 0.7;
+}
+
+.show-large-pic {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.large-pic-frame{
+    position: relative;
+    top: 8vh;
+    left: 25vw;
+    width: 50%;
+    height: 50%;
+}
+
+.large-picture{
+    max-width: 100%;
+    height: auto;
+}
+
+.close-picture-frame {
+    position: absolute;
+    top: 12vh;
+    right: 20vw;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+@media(max-width:1350px){
+    .pf-container {
+        grid-template-columns: repeat(3, 2fr);
+    }
+}
+
+
+@media(max-width:1000px){
+    .pf-container {
+        grid-template-columns: repeat(2, 8fr);
+    }
+}
+
+@media(max-width:700px){
+    .pf-container {
+        grid-template-columns:1fr;
+    }
+}
+
+/* CSS for About page */
+.body-about{
+    min-height: 100vh;
+    background-color: rgba(12,12,12,255);
+    font-family: Roboto,sans-serif;
+    color: white;
+}
+
+.about-content{
+    display: grid;
+    position: relative;
+    top: 28vh;
+    grid-template-columns:repeat(2,2fr);
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.headings{
+    padding-top: 6%;
+    padding-left: 18%;
+}
+
+.headings h1{
+    font-family: Roboto-light,sans-serif;
+    font-size: 4rem;
+}
+
+.paragraphs-n-button{
+    display: grid;
+    grid-template-rows:repeat(3,2fr);
+    padding-left: 10%;
+}
+
+.paragraphs-n-button div{
+    width: 28vw;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    align-content: center;
+    justify-content: center;
+}
+
+.see-my-work-button{
+     align-content: center;
+}
+
+.see-my-work-button button {
+    width: 65%;
+    padding: 1.6vh 4.2vw;
+    background-color: white;
+    font-family: Roboto-Black, sans-serif;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.see-my-work-button a{
+    text-decoration: none;
+    color: black;
+}
+
+.word{
+    display: inline-block;
+    margin-top: 1.3vh;
+    margin-bottom: 1.3vh;
+}
+
+@media(max-width:1100px){
+    .about-content{
+        grid-template-columns:2fr;
+    }
+
+
+    .paragraphs-n-button div {
+        width: 90%;
+        font-size: 0.9rem;
+        margin-left: 4.2vw;
+    }
+
+    .see-my-work-button button{
+        width: 90%;
+    }
+}
+
+/* CSS for Service page */
+.body-services{
+    min-height: 100vh;
+    background-color: rgba(12,12,12,255);
+    font-family: Roboto,sans-serif;
+    color: white;
+}
+
+.service-container{
+    display: grid;
+    position: relative;
+    top: 28vh;
+    grid-template-columns:0.6fr 1fr;
+    margin-left: 10vw;
+    margin-right: 18vw;
+}
+
+.service-boxes{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    border-bottom: white solid 3px;
+    max-width: 700px;
+}
+
+.service-container h2{
+    font-family: Roboto-thin,sans-serif;
+    font-size: 3rem;
+}
+
+.service-container h4{
+    font-family: Roboto-thin,sans-serif;
+    font-size: 2rem;
+    display: inline-block;
+    margin-bottom: 1.5vh;
+}
+
+.service-container h6{
+    font-family: Roboto-thin,sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+.service-boxes div{
+    margin-bottom: 3vh;
+    margin-top: 2vh;
+    max-width: 300px;
+}
+
+.service-boxes > .service-div-right {
+    justify-self: flex-end;
+}
+
+.service-container > .work-with-me-button{
+    padding-top: 3vh;
+    padding-left: 12.5vw;
+    justify-self: center;
+}
+
+@media(max-width:1350px){
+    .service-boxes{
+        grid-template-columns:1fr;
+    }
+    .service-boxes > .service-div-right {
+        justify-self: flex-start;
+    }
+}
+@media(max-width:900px){
+    .service-container{
+        grid-template-columns:1fr;
+    }
+
+    .service-container > .work-with-me-button{
+        padding-top: 2vh;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+}
+
+/* CSS for Contact page */
+.body-contact{
+    min-height: 100vh;
+    background-color: rgba(12,12,12,255);
+    font-family: Roboto,sans-serif;
+    color: white;
+}
+
+.contact-heading {
+    width: 56.5%;
+    justify-items: center;
+}
+
+.contact-heading h2{
+    font-family: Roboto-thin,sans-serif;
+}
+
+.contact-container{
+    position: relative;
+    display: grid;
+    grid-template-rows:0.5fr 4fr 1fr;
+    top: 28vh;
+    align-items: center;
+    justify-items: center;
+}
+
+.contact-form-container{
+    background-color: #1b1f24;
+    border-radius: 4px;
+    width: 56.5%;
+    margin-top: 2vh;
+    overflow: hidden;
+}
+
+.contact-form-container form{
+    padding: 3vh 2vw;
+}
+
+.contact-form-container button {
+    padding: 1.6vh 3.2vw;
+    background-color: white;
+    font-family: Roboto-Black,sans-serif;
+    font-weight: bolder;
+    font-size: 1rem;
+    margin-top: 1vh;
+}
+
+.button-flex{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.contact-social-media-icons{
+    display: flex;
+    width: 56.5%;
+    height: 100%;
+    justify-content: right;
+}
+
+
+.contact-social-media-icons img{
+    max-width: 100%;
+    height: auto;
+}
+
+.facebook-ico{
+    margin-top: 2vh;
+    padding-left: 3px;
+    padding-top: 1vh;
+    display: inline-block;
+    border: solid black 1px;
+    border-radius: 10px;
+    width: 59px;
+    height: 59px;
+    background-color: white;
+}
+
+.instagram-ico,.x-twitter-ico{
+    margin-top: 2vh;
+    margin-left: 1vw;
+    padding-left: 5px;
+    padding-top: 6px;
+    display: inline-block;
+    border: solid black 1px;
+    border-radius: 10px;
+    width: 59px;
+    height: 59px;
+    background-color: white;
+}
+
+.contact-form-container p{
+    padding-top: 1.5vh;
+    color: orange;
+}
+
+.contact-form-container input{
+    border-radius: 8px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova's Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="body-portfolio">
+    <header>
+        <nav>
+            <h1 class="logo">NOVA</h1>
+            <ul>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="#">Portfolio</a></li>
+                <li class="hideOnMobile"><a href="services.html">Service</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                <li onclick="showSidebar()" class="drop-down"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+            </ul>
+            <ul class="side-menu">
+                <li onclick="hideSidebar()" class="menu-close"><svg xmlns="http://www.w3.org/2000/svg"  height="28px" viewBox="0 -960 960 960" width="28px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+                <li class="items"><a href="index.html">Home</a></li>
+                <li class="items"><a href="#">Portfolio</a></li>
+                <li class="items"><a href="services.html">Service</a></li>
+                <li class="items"><a href="about.html">About</a></li>
+                <li class="items"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="pf-container">
+            <div class="image-frame"><img onclick="showImage(this.src)" id="img-design" src="/Images/gallery5.jpg" alt="Design"></div>
+            <div class="image-frame"><img onclick="showImage(this.src)" id="img-coding" src="/Images/gallery1.jpg" alt="Coding"></div>
+            <div class="image-frame"><img onclick="showImage(this.src)" id="img-planing" src="/Images/gallery7.jpg" alt="Planing"></div>
+            <div class="image-frame"><img onclick="showImage(this.src)" id="img-chart" src="/Images/gallery2.jpg" alt="Charts and Diagrams"></div>
+            <div class="image-frame"><img onclick="showImage(this.src)" id="img-laptop" src="/Images/gallery4.jpg" alt="Laptop"></div>
+            <div class="image-frame"><img onclick="showImage(this.src)" id="img-tablet" src="/Images/gallery8.jpg" alt="Tablet"></div>
+            <div class="image-frame"><img onclick="showImage(this.src)" id="img-design-table" src="/Images/gallery3.jpg" alt="Design's table"></div>
+            <div class="image-frame"><img onclick="showImage(this.src)" id="img-scribble" src="/Images/gallery6.jpg" alt="Scribble"></div>
+        </div>
+        <!-- The Modal -->
+        <div class="show-large-pic">
+            <span onclick="hideImage()" class="close-picture-frame">&times;</span>
+            <div class="large-pic-frame">
+                <img class="large-picture">
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.side-menu');
+        sidebar.style.display = 'flex';
+    }
+
+    function hideSidebar(){
+        const sidebar = document.querySelector('.side-menu');
+        sidebar.style.display = 'none';
+    }
+
+    function showImage(pic_src){
+        const pic_div = document.querySelector('.show-large-pic');
+        const pic_self = document.querySelector('.large-picture');
+        pic_div.style.display= 'block';
+        pic_self.src = pic_src;
+    }
+
+    function hideImage(){
+        const pic_div = document.querySelector('.show-large-pic');
+        pic_div.style.display= 'none';
+    }
+
+
+
+</script>
+</html>

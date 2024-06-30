@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>About My Website</title>
+</head>
+<body class="body-about">
+    <header>
+        <nav>
+            <h1 class="logo">NOVA</h1>
+            <ul>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="portfolio.html">Portfolio</a></li>
+                <li class="hideOnMobile"><a href="services.html">Service</a></li>
+                <li class="hideOnMobile"><a href="#">About</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                <li onclick="showSidebar()" class="drop-down"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+            </ul>
+            <ul class="side-menu">
+                <li onclick="hideSidebar()" class="menu-close"><svg xmlns="http://www.w3.org/2000/svg"  height="28px" viewBox="0 -960 960 960" width="28px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+                <li class="items"><a href="index.html">Home</a></li>
+                <li class="items"><a href="portfolio.html">Portfolio</a></li>
+                <li class="items"><a href="services.html">Service</a></li>
+                <li class="items"><a href="#">About</a></li>
+                <li class="items"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="self-introduction">
+            <div class="about-content">
+                <div class="headings">
+                    <h2>HI, I'M A&#46&#46</h2>
+                    <br/>
+                    <h1><span class="word">Web</span> <br/> <span class="word">Application</span><br/> <span class="word">Designer.</span></h1>
+                </div>
+                <div class="paragraphs-n-button">
+                    <div>
+                        <p>
+                            Welcome to my digital canvas, where pixels dance and creativity knows no bounds.
+                            As a web designer, I specialize in crafting captivating online experiences that
+                            marry form and function seamlessly. With a keen eye for aesthetics and a passion for
+                            innovation, I transform concepts into visually stunning and user-friendly websites that
+                            leave a lasting impression.
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            My approach to design is rooted in meticulous attention to detail and a deep
+                            understanding of user behavior. I believe that every element on a webpage should
+                            serve a purpose, whether it's guiding the user's journey or enhancing the overall
+                            aesthetic appeal. From sleek and minimalist layouts to bold and vibrant designs, I
+                            tailor each project to meet the unique needs and preferences of my clients. Explore
+                            my portfolio to discover a diverse range of projects that showcase my dedication to
+                            creating compelling digital experiences."
+                        </p>
+                    </div>
+                    <div class="see-my-work-button">
+                        <a href="portfolio.html"><button>SEE MY WORK</button></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.side-menu')
+        sidebar.style.display = 'flex'
+    }
+
+    function hideSidebar(){
+        const sidebar = document.querySelector('.side-menu')
+        sidebar.style.display = 'none'
+    }
+</script>
+</html>

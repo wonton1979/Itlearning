@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova's portfolio website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="main-page">
+    <header>
+        <nav>
+            <h1 class="logo">NOVA</h1>
+            <ul>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="portfolio.html">Portfolio</a></li>
+                <li class="hideOnMobile"><a href="services.html">Service</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                <li onclick="showSidebar()" class="drop-down"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+            </ul>
+            <ul class="side-menu">
+                <li onclick="hideSidebar()" class="menu-close"><svg xmlns="http://www.w3.org/2000/svg"  height="28px" viewBox="0 -960 960 960" width="28px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+                <li class="items"><a href="#">Home</a></li>
+                <li class="items"><a href="portfolio.html">Portfolio</a></li>
+                <li class="items"><a href="services.html">Service</a></li>
+                <li class="items"><a href="about.html">About</a></li>
+                <li class="items"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main-content">
+            <div class="content-one">
+                <div class="work-with-me-button">
+                    <a href="contact.html"><button>WORK WITH NOVA</button></a>
+                </div>
+                <h1>Designs by Nova</h1>
+                <article class="purpose">
+                    <p>
+                        Nova's portfolio website is an expression of her abilities to
+                        innovate through design. Just as her creations know no bounds,
+                        her designs embrace the same spirit. Elegant,
+                        beautiful and functional.
+                        <span>&#8212; this describes the soul of anything Made by Nova."</span>
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.side-menu')
+        sidebar.style.display = 'flex'
+    }
+
+    function hideSidebar(){
+        const sidebar = document.querySelector('.side-menu')
+        sidebar.style.display = 'none'
+    }
+</script>
+</html>
